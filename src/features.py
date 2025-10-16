@@ -19,7 +19,7 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=args.test_size, random_state=args.random_state, stratify=y
     )
-
+   
     os.makedirs(args.out_dir, exist_ok=True)
     np.save(os.path.join(args.out_dir, "X_train.npy"), X_train)
     np.save(os.path.join(args.out_dir, "X_test.npy"), X_test)
